@@ -58,11 +58,11 @@ body {
   width: 100%;
   height: 700px;
   object-fit: cover;
-  padding: 5px 10%;
+  // padding: 5px 10%;
   
   @media (width <= 500px) {
     height: 200px;
-    padding: 5px;
+    // padding: 5px;
   }
 }
 
@@ -195,6 +195,89 @@ body {
   .SignUpSubmitBtn:hover {
     background-color: base.$primary-color-07;
     color: #111;
+  }
+
+}
+
+///////////////////////////////////////////////// author carousel 
+ 
+
+.authorCarouselContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 50px;
+
+  h3 {
+    padding: 25px;
+  }
+
+  .authorsContainer {
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background-color: #dff;
+    border: 2px solid base.$primary-color-03;
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+
+    svg {
+      cursor: pointer;
+      background-color: base.$primary-color-03;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+    }
+
+    svg:hover {
+      background-color: base.$primary-color-07;
+    }
+
+    .leftArrow {
+      transform: rotate(180deg);
+      position: absolute;
+      left: 0;
+    }
+
+    .rightArrow {
+      position: absolute;
+      right: 0;
+    }
+    
+    .eachAuthorCarousel {
+      background-color: base.$primary-color-03;
+      width: 275px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 25px;
+      gap: 20px;
+      padding-bottom: 20px;
+  
+      img {
+        object-fit: cover;
+        background-position: center;
+        border-radius: 50%;
+        margin: 40px;
+      }
+
+      h4 {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      h5 {
+        margin-bottom: 30px;
+      }
+    }
   }
 
 }

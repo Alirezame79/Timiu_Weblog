@@ -3,6 +3,7 @@ import { Inter, Baloo_Bhaijaan_2 } from "next/font/google";
 import PostsCarousel from "@/cpmponents/PostsCarousel";
 import { useEffect } from "react";
 import axios from "axios";
+import AuthorCarousel from "@/cpmponents/AuthorCarousel";
 
 const balooBhaijaan2 = Baloo_Bhaijaan_2({ subsets: ["arabic"] });
 
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <main className={`${balooBhaijaan2.className}`}>
         <PostsCarousel />
+        <AuthorCarousel />
       </main>
     </>
   );

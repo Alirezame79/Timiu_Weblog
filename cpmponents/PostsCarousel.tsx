@@ -4,12 +4,6 @@ import { useEffect, useState } from "react"
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-interface Posts {
-  ID: string,
-  title: string,
-  image: string
-}
-
 export default function PostsCarousel() {
   const [posts, setPosts] = useState<Posts[]>([]);
   const [index, setIndex] = useState(0);
