@@ -1,11 +1,11 @@
-import { Baloo_Bhaijaan_2 } from "next/font/google";
+import { Rubik } from "next/font/google";
 
-const balooBhaijaan2 = Baloo_Bhaijaan_2({ subsets: ["arabic"] });
+const rubik = Rubik({ subsets: ["arabic"] });
 
 export default function Footer() {
 
   return (
-    <div className={`footer text-body-secondary ${balooBhaijaan2.className}`}>
+    <div className={`footer text-body-secondary ${rubik.className}`}>
       تمام حقوق اثر متعلق به گروه تام می باشد
     </div>
   )

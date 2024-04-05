@@ -3,10 +3,12 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useRouter } from "next/router";
 
 export default function PostsCarousel() {
   const [posts, setPosts] = useState<Posts[]>([]);
   const [index, setIndex] = useState(0);
+  const router = useRouter();
   
   useEffect(() => {
     async function fetchRequest() {
@@ -23,16 +25,21 @@ export default function PostsCarousel() {
     
     fetchRequest();
   }, [])
-  
+
   const handleSelect = (selectedIndex: number) => {
     setIndex(selectedIndex);
   };
 
+  function carouselClicked(id: string) {
+    console.log(id)
+    router.push('post/' + id)
+  }
+
   return (
-    <Carousel activeIndex={index} variant="dark" onSelect={handleSelect}>
+    <Carousel activeIndex={index} variant="light" onSelect={handleSelect}>
       {posts.map((post) => (
         <Carousel.Item key={post.ID} interval={5000}>
-          <img className="carouselImage" src={post.image} alt="slides" />
+          <img className="carouselImage" src={post.image} alt="slides" onClick={() => carouselClicked(post.ID)} />
           <Carousel.Caption>
             <h3 className="carouselCaption">{post.title}</h3>
           </Carousel.Caption>

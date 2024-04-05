@@ -1,11 +1,11 @@
-import { Baloo_Bhaijaan_2 } from "next/font/google";
+import { Rubik } from "next/font/google";
 
-const balooBhaijaan2 = Baloo_Bhaijaan_2({ subsets: ["arabic"] });
+const rubik = Rubik({ subsets: ["arabic"] });
 
 export default function Header() {
 
   return (
-    <nav className={`navbar navbar-expand-lg headerNavbar ${balooBhaijaan2.className}`}>
+    <nav className={`navbar navbar-expand-lg headerNavbar ${rubik.className}`}>
       <div className="container-fluid">
         <a className="navbar-brand headerNavbarTitle" href="/">تیمیو</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

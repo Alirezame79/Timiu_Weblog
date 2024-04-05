@@ -39,7 +39,7 @@ export default function AuthorCarousel() {
         {index !== 1 && <svg onClick={rightArrowClicked} className="rightArrow" height="100%" width="60px" id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><polygon points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 "/></svg>}
         {authors.map((author) => {
           return (
-            <>
+            <div key={author.ID}>
             {(((author.ID as unknown as number) - index === 0 ) ||
              ((author.ID as unknown as number) - index === 1 ) ||
              ((author.ID as unknown as number) - index === 2 )) && 
@@ -51,7 +51,7 @@ export default function AuthorCarousel() {
                 alt="author profile image" />
               <h4>{author.name}</h4>
               <h5>{author.count} مقاله</h5>
-            </div> }</>
+            </div> }</div>
           )
         })}
         {index !== authors.length - 2 && <svg onClick={leftArrowClicked} className="leftArrow" height="100%" width="60px" id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><polygon points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 "/></svg>}

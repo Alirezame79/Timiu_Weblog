@@ -1,5 +1,8 @@
 import { useRouter } from "next/router";
 import React, { useState } from "react"
+import { Rubik } from "next/font/google";
+
+const rubik = Rubik({ subsets: ["arabic"] });
 
 export default function SignUp() {
   const [step, setStep] = useState(1);
@@ -19,7 +22,7 @@ export default function SignUp() {
   switch (step) {
     case 1:
       return (
-        <div className="signUpContainer">
+        <div className={`signUpContainer ${rubik.className}`}>
           <div className="card signUpPathCard">
             <div className="card-body signUpPath">
               <div className="signUpPathLine goneLine"></div>
@@ -82,7 +85,7 @@ export default function SignUp() {
       )
     case 2:
       return (
-        <div className="signUpContainer">
+        <div className={`signUpContainer ${rubik.className}`}>
           <div className="card signUpPathCard">
             <div className="card-body signUpPath">
               <div className="signUpPathLine goneLine"></div>
@@ -158,7 +161,7 @@ export default function SignUp() {
       ) 
     case 3:
       return (
-        <div className="signUpContainer">
+        <div className={`signUpContainer ${rubik.className}`}>
           <div className="card signUpPathCard">
             <div className="card-body signUpPath">
               <div className="signUpPathLine goneLine"></div>
