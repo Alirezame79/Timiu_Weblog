@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { Rubik } from "next/font/google";
-import PostsCarousel from "@/cpmponents/PostsCarousel";
-import AuthorCarousel from "@/cpmponents/AuthorCarousel";
+import PostsCarousel from "@/components/PostsCarousel";
+import AuthorCarousel from "@/components/AuthorCarousel";
 
 const rubik = Rubik({ subsets: ["arabic"] });
 

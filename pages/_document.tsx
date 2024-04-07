@@ -1,5 +1,5 @@
-import Footer from "@/cpmponents/Footer";
-import Header from "@/cpmponents/Header";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {

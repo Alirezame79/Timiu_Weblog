@@ -12,7 +12,6 @@ export default function SignUp() {
     e.preventDefault();
 
     setStep(step + 1);
-    console.log(step)
   }
 
   function finishSignUpClicked() {
@@ -140,8 +139,8 @@ export default function SignUp() {
               </div>
               <div className="col-md-4">
                 <label htmlFor="inputState" className="form-label">استان</label>
-                <select id="inputState" className="form-select">
-                  <option selected>انتخاب ...</option>
+                <select id="inputState" defaultValue={'انتخاب ...'} className="form-select">
+                  <option>انتخاب ...</option>
                   <option>گیلان</option>
                   <option>تهران</option>
                   <option>شیراز</option>

@@ -2,16 +2,12 @@ import axios from "axios";
 import { Rubik } from "next/font/google";
 import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
-import { Reorder } from "framer-motion";
 
 const rubik = Rubik({ subsets: ["arabic"] });
 
 export default function EditPost() {
   const [post, setPost] = useState<Post>()
   const [postBody, setPostBody] = useState<Body[]>([])
-  const [children, setChildren] = useState(["1", "2", "3", "4"])
-  const draggedItem = useRef(0);
-  const draggedOverItem = useRef(0);
   const draggedItemIndex = useRef(0);
   const draggedOverItemIndex = useRef(0);
 
@@ -70,7 +66,9 @@ export default function EditPost() {
             onDragEnter={(e) => dragEnter(e, element.index)} 
             onDragEnd={dragEnd}>
               <div className="postEachElementEditContainer" draggable>
-                <svg width={50} height={50} id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><g><rect height="32" width="512" y="144"/><rect height="32" width="512" y="240"/><rect height="32" width="512" y="336"/></g></svg>
+                <svg width={50} height={50} id="Layer_1" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                  <g><rect height="32" width="512" y="144"/><rect height="32" width="512" y="240"/>
+                  <rect height="32" width="512" y="336"/></g></svg>
                 {element.type === "text" && <p>{element.data}</p>}
                 {element.type === "topic" && <h4>{element.data}</h4>}
                 {element.type === "image" && <img src={element.data} />}
