@@ -335,4 +335,82 @@ body {
       border-radius: 10px;
     }
   }
+
+  .postAuthorContainer {
+    @extend .postContainer;
+    position: fixed;
+    right: 25px;
+    margin: 5px;
+    padding: 15px 10px 5px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      object-fit: cover;
+      background-position: center;
+      border-radius: 50%;
+    }
+  }
+
+  .postReactionContainer {
+    @extend .postContainer;
+    position: fixed;
+    right: 25px;
+    bottom: 100px;
+    margin: 5px;
+    padding: 10px 25px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      height: 40px;
+      width: 40px;
+      cursor: pointer;
+      padding: 3px;
+    }
+
+    svg:last-child {
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+//////////////////////////////////////////// edit post
+
+.postEachElement{
+
+  .postEachElementEditContainer {
+    background-color: base.$primary-color-03;
+    border-radius: 25px;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+  
+    p, h4 {
+      margin-right: 100px;
+      margin: auto 100px auto 10px;
+    }
+  
+    img {
+      float: left;
+    }
+  
+    svg {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 25px;
+      cursor: grab;
+    }
+  }
 }
